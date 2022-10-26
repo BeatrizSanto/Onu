@@ -10,13 +10,29 @@ img{
 `
 const Modal= styled.div`
 width:50%;
-height:15rem;
+min-height:20vh;
 background-color:yellow;
-transform:${({open}) => open ? 'scale(1)' : 'scale(0)'}
+padding: 0.5rem;
+transform:${({open}) => open ? 'scale(1)' : 'scale(0)'};
  transition: transform 0.4s easy-in-out;
 position:fixed;
-top:10%;
+top:20%;
 z-index:2000;
+display:flex;
+flex-direction: column;
+align-items: center;
+p{
+    color:black;
+    width:70%;
+    font-size: 2rem; 
+    text-align: center;
+}
+@media screen and (max-width: 500px) {
+    width:95%;
+    p{
+        width: 100%;
+    }
+}
 `
 export default function Cards(){
 
@@ -36,7 +52,7 @@ export default function Cards(){
         {figura.map((item, index) =>(
             <>
             <Button open={open} onClick={() => {modal(item);abrir()}} key={index}>
-                <img src={item.img}/>
+                <img src={item.img}alt='#'/>
             </Button>
             </>
         ))}

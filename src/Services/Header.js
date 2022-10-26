@@ -12,7 +12,7 @@ align-items: center;
 
 
 //  const  = styled`
-//  color:black;
+//  color:white;
 //  text-decoration: none;
 // `
 
