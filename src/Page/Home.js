@@ -1,5 +1,4 @@
 import React from "react"
-import Header from "../Services/Header"
 import Onu from "../Imagens/Onu.png"
 import styled from "styled-components"
 import Figura from '../components/Cards/cards'
